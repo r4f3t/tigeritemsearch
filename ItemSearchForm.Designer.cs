@@ -38,7 +38,7 @@
             this.TXTGeneral.BackColor = System.Drawing.SystemColors.Window;
             this.TXTGeneral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXTGeneral.Location = new System.Drawing.Point(156, 8);
-            this.TXTGeneral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.TXTGeneral.Name = "TXTGeneral";
             this.TXTGeneral.Size = new System.Drawing.Size(260, 22);
             this.TXTGeneral.TabIndex = 0;
@@ -50,11 +50,11 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox2.Location = new System.Drawing.Point(7, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(149, 22);
-            this.textBox2.TabIndex = 0;
+            this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Genel Arama";
             // 
             // LBItems
@@ -79,9 +79,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.TXTGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ItemSearchForm";
-            this.Text = "ItemSearchForm";
+            this.Text = "Tiger Ürün Kartı Arama Ekranı";
             this.ResumeLayout(false);
             this.PerformLayout();
 
