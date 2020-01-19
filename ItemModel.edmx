@@ -450,7 +450,7 @@
             <PropertyRef Name="LOGREF" />
           </Key>
           <Property Name="LOGREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PARLOGREF" Type="Int32" />
+          <Property Name="PARLOGREF" Type="Int32" Nullable="false" />
           <Property Name="AFiyat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="A" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="B" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
