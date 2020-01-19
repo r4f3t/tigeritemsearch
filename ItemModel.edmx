@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TIGERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LG_206_ITEMS">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ACTIVE" Type="smallint" />
+          <Property Name="CARDTYPE" Type="smallint" />
+          <Property Name="CODE" Type="varchar" MaxLength="25" />
+          <Property Name="NAME" Type="varchar" MaxLength="51" />
+          <Property Name="STGRPCODE" Type="varchar" MaxLength="25" />
+          <Property Name="PRODUCERCODE" Type="varchar" MaxLength="101" />
+          <Property Name="SPECODE" Type="varchar" MaxLength="11" />
+          <Property Name="CYPHCODE" Type="varchar" MaxLength="11" />
+          <Property Name="CLASSTYPE" Type="smallint" />
+          <Property Name="PURCHBRWS" Type="smallint" />
+          <Property Name="SALESBRWS" Type="smallint" />
+          <Property Name="MTRLBRWS" Type="smallint" />
+          <Property Name="VAT" Type="float" />
+          <Property Name="PAYMENTREF" Type="int" />
+          <Property Name="TRACKTYPE" Type="smallint" />
+          <Property Name="LOCTRACKING" Type="smallint" />
+          <Property Name="TOOL" Type="smallint" />
+          <Property Name="AUTOINCSL" Type="smallint" />
+          <Property Name="DIVLOTSIZE" Type="smallint" />
+          <Property Name="SHELFLIFE" Type="float" />
+          <Property Name="SHELFDATE" Type="smallint" />
+          <Property Name="DOMINANTREFS1" Type="int" />
+          <Property Name="DOMINANTREFS2" Type="int" />
+          <Property Name="DOMINANTREFS3" Type="int" />
+          <Property Name="DOMINANTREFS4" Type="int" />
+          <Property Name="DOMINANTREFS5" Type="int" />
+          <Property Name="DOMINANTREFS6" Type="int" />
+          <Property Name="DOMINANTREFS7" Type="int" />
+          <Property Name="DOMINANTREFS8" Type="int" />
+          <Property Name="DOMINANTREFS9" Type="int" />
+          <Property Name="DOMINANTREFS10" Type="int" />
+          <Property Name="DOMINANTREFS11" Type="int" />
+          <Property Name="DOMINANTREFS12" Type="int" />
+          <Property Name="IMAGEINC" Type="smallint" />
+          <Property Name="TEXTINC" Type="smallint" />
+          <Property Name="DEPRTYPE" Type="smallint" />
+          <Property Name="DEPRRATE" Type="float" />
+          <Property Name="DEPRDUR" Type="smallint" />
+          <Property Name="SALVAGEVAL" Type="float" />
+          <Property Name="REVALFLAG" Type="smallint" />
+          <Property Name="REVDEPRFLAG" Type="smallint" />
+          <Property Name="PARTDEP" Type="smallint" />
+          <Property Name="DEPRTYPE2" Type="smallint" />
+          <Property Name="DEPRRATE2" Type="float" />
+          <Property Name="DEPRDUR2" Type="smallint" />
+          <Property Name="REVALFLAG2" Type="smallint" />
+          <Property Name="REVDEPRFLAG2" Type="smallint" />
+          <Property Name="PARTDEP2" Type="smallint" />
+          <Property Name="APPROVED" Type="smallint" />
+          <Property Name="UNITSETREF" Type="int" />
+          <Property Name="QCCSETREF" Type="int" />
+          <Property Name="DISTAMOUNT" Type="float" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="smallint" />
+          <Property Name="SITEID" Type="smallint" />
+          <Property Name="RECSTATUS" Type="smallint" />
+          <Property Name="ORGLOGICREF" Type="int" />
+          <Property Name="UNIVID" Type="varchar" MaxLength="25" />
+          <Property Name="DISTLOTUNITS" Type="smallint" />
+          <Property Name="COMBLOTUNITS" Type="smallint" />
+          <Property Name="WFSTATUS" Type="int" />
+          <Property Name="DISTPOINT" Type="float" />
+          <Property Name="CAMPPOINT" Type="float" />
+          <Property Name="CANUSEINTRNS" Type="smallint" />
+          <Property Name="ISONR" Type="varchar" MaxLength="11" />
+          <Property Name="GROUPNR" Type="varchar" MaxLength="9" />
+          <Property Name="PRODCOUNTRY" Type="varchar" MaxLength="13" />
+          <Property Name="ADDTAXREF" Type="int" />
+          <Property Name="QPRODAMNT" Type="float" />
+          <Property Name="QPRODUOM" Type="int" />
+          <Property Name="QPRODSRCINDEX" Type="smallint" />
+          <Property Name="EXTACCESSFLAGS" Type="int" />
+          <Property Name="PACKET" Type="smallint" />
+          <Property Name="SALVAGEVAL2" Type="float" />
+          <Property Name="SELLVAT" Type="float" />
+          <Property Name="RETURNVAT" Type="float" />
+          <Property Name="LOGOID" Type="varchar" MaxLength="25" />
+          <Property Name="LIDCONFIRMED" Type="smallint" />
+          <Property Name="GTIPCODE" Type="varchar" MaxLength="25" />
+          <Property Name="EXPCTGNO" Type="varchar" MaxLength="25" />
+          <Property Name="B2CCODE" Type="varchar" MaxLength="25" />
+          <Property Name="MARKREF" Type="int" />
+          <Property Name="IMAGE2INC" Type="smallint" />
+          <Property Name="AVRWHDURATION" Type="float" />
+          <Property Name="EXTCARDFLAGS" Type="int" />
+          <Property Name="MINORDAMOUNT" Type="float" />
+          <Property Name="FREIGHTPLACE" Type="varchar" MaxLength="51" />
+          <Property Name="FREIGHTTYPCODE1" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE2" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE3" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE4" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE5" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE6" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE7" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE8" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE9" Type="varchar" MaxLength="13" />
+          <Property Name="FREIGHTTYPCODE10" Type="varchar" MaxLength="13" />
+          <Property Name="STATECODE" Type="varchar" MaxLength="13" />
+          <Property Name="STATENAME" Type="varchar" MaxLength="41" />
+          <Property Name="EXPCATEGORY" Type="varchar" MaxLength="25" />
+          <Property Name="LOSTFACTOR" Type="float" />
+          <Property Name="TEXTINCENG" Type="smallint" />
+          <Property Name="EANBARCODE" Type="varchar" MaxLength="25" />
+          <Property Name="DEPRCLASSTYPE" Type="varchar" MaxLength="31" />
+          <Property Name="WFLOWCRDREF" Type="int" />
+          <Property Name="SELLPRVAT" Type="float" />
+          <Property Name="RETURNPRVAT" Type="float" />
+          <Property Name="LOWLEVELCODES1" Type="int" />
+          <Property Name="LOWLEVELCODES2" Type="int" />
+          <Property Name="LOWLEVELCODES3" Type="int" />
+          <Property Name="LOWLEVELCODES4" Type="int" />
+          <Property Name="LOWLEVELCODES5" Type="int" />
+          <Property Name="LOWLEVELCODES6" Type="int" />
+          <Property Name="LOWLEVELCODES7" Type="int" />
+          <Property Name="LOWLEVELCODES8" Type="int" />
+          <Property Name="LOWLEVELCODES9" Type="int" />
+          <Property Name="LOWLEVELCODES10" Type="int" />
+          <Property Name="ORGLOGOID" Type="varchar" MaxLength="25" />
+          <Property Name="QPRODDEPART" Type="smallint" />
+          <Property Name="CANCONFIGURE" Type="smallint" />
+          <Property Name="CHARSETREF" Type="int" />
+          <Property Name="CANDEDUCT" Type="smallint" />
+          <Property Name="CONSCODEREF" Type="int" />
+          <Property Name="SPECODE2" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE3" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE4" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE5" Type="varchar" MaxLength="11" />
+          <Property Name="EXPENSE" Type="smallint" />
+          <Property Name="ORIGIN" Type="varchar" MaxLength="25" />
+          <Property Name="NAME2" Type="varchar" MaxLength="51" />
+          <Property Name="COMPKDVUSE" Type="smallint" />
+          <Property Name="USEDINPERIODS" Type="smallint" />
+          <Property Name="EXIMTAX1" Type="float" />
+          <Property Name="EXIMTAX2" Type="float" />
+          <Property Name="EXIMTAX3" Type="float" />
+          <Property Name="EXIMTAX4" Type="float" />
+          <Property Name="EXIMTAX5" Type="float" />
+          <Property Name="PRODUCTLEVEL" Type="smallint" />
+          <Property Name="APPSPEVATMATRAH" Type="smallint" />
+          <Property Name="NAME3" Type="varchar" MaxLength="201" />
+          <Property Name="FACOSTKEYS" Type="smallint" />
+          <Property Name="KKLINESDISABLE" Type="smallint" />
+          <Property Name="APPROVE" Type="smallint" />
+          <Property Name="APPROVEDATE" Type="datetime" />
+          <Property Name="GLOBALID" Type="varchar" MaxLength="51" />
+          <Property Name="SALEDEDUCTPART1" Type="smallint" />
+          <Property Name="SALEDEDUCTPART2" Type="smallint" />
+          <Property Name="PURCDEDUCTPART1" Type="smallint" />
+          <Property Name="PURCDEDUCTPART2" Type="smallint" />
+          <Property Name="CATEGORYID" Type="varchar" MaxLength="51" />
+          <Property Name="CATEGORYNAME" Type="varchar" MaxLength="256" />
+          <Property Name="KEYWORD1" Type="varchar" MaxLength="121" />
+          <Property Name="KEYWORD2" Type="varchar" MaxLength="121" />
+          <Property Name="KEYWORD3" Type="varchar" MaxLength="121" />
+          <Property Name="KEYWORD4" Type="varchar" MaxLength="121" />
+          <Property Name="KEYWORD5" Type="varchar" MaxLength="121" />
+          <Property Name="GUID" Type="varchar" MaxLength="37" />
+          <Property Name="DEMANDMEETSORTFLD1" Type="varchar" MaxLength="51" />
+          <Property Name="DEMANDMEETSORTFLD2" Type="varchar" MaxLength="51" />
+          <Property Name="DEMANDMEETSORTFLD3" Type="varchar" MaxLength="51" />
+          <Property Name="DEMANDMEETSORTFLD4" Type="varchar" MaxLength="51" />
+          <Property Name="DEMANDMEETSORTFLD5" Type="varchar" MaxLength="51" />
+          <Property Name="DEDUCTCODE" Type="varchar" MaxLength="11" />
+          <Property Name="PROJECTREF" Type="int" />
+          <Property Name="NAME4" Type="varchar" MaxLength="201" />
+          <Property Name="QPRODSUBAMNT" Type="float" />
+          <Property Name="QPRODSUBUOM" Type="int" />
+          <Property Name="QPRODSUBSRCINDEX" Type="smallint" />
+          <Property Name="QPRODSUBDEPART" Type="smallint" />
+          <Property Name="SORDAMNTTOLERANCE" Type="float" />
+          <Property Name="PORDAMNTTOLERANCE" Type="float" />
+          <Property Name="PUBLICCOUNTRYREF" Type="int" />
+          <Property Name="CPACODE" Type="varchar" MaxLength="25" />
+          <Property Name="MULTIADDTAX" Type="smallint" />
+          <Property Name="FAUSEFULLIFECODE2" Type="varchar" MaxLength="11" />
+          <Property Name="FAUSEFULLIFECODE" Type="varchar" MaxLength="11" />
+          <Property Name="MOLDMAINTLIFETYPE" Type="smallint" />
+          <Property Name="MOLDMAINTNUMBER" Type="int" />
+          <Property Name="MOLDLIFEASRATIO" Type="smallint" />
+          <Property Name="MOLDMAINTLIFE" Type="float" />
+          <Property Name="MOLDLIFETRACKTYPE" Type="smallint" />
+          <Property Name="MOLD" Type="smallint" />
+          <Property Name="MOLDFACTOR" Type="smallint" />
+          <Property Name="MOLDUSAGELIFE" Type="float" />
+        </EntityType>
+        <EntityType Name="LG_XT1001_206">
+          <Key>
+            <PropertyRef Name="LOGREF" />
+          </Key>
+          <Property Name="LOGREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PARLOGREF" Type="int" />
+          <Property Name="AFiyat" Type="varchar" MaxLength="20" />
+          <Property Name="A" Type="varchar" MaxLength="20" />
+          <Property Name="B" Type="varchar" MaxLength="20" />
+          <Property Name="SFiyat" Type="varchar" MaxLength="20" />
+          <Property Name="C" Type="varchar" MaxLength="20" />
+          <Property Name="D" Type="varchar" MaxLength="20" />
+          <Property Name="E" Type="varchar" MaxLength="20" />
+          <Property Name="F" Type="varchar" MaxLength="20" />
+          <Property Name="G" Type="varchar" MaxLength="20" />
+          <Property Name="H" Type="varchar" MaxLength="20" />
+          <Property Name="I" Type="varchar" MaxLength="20" />
+          <Property Name="J" Type="varchar" MaxLength="20" />
+          <Property Name="Z" Type="varchar" MaxLength="20" />
+          <Property Name="B2BACK1" Type="varchar" MaxLength="251" />
+          <Property Name="B2BACK2" Type="varchar" MaxLength="251" />
+          <Property Name="B2BACK3" Type="varchar" MaxLength="251" />
+          <Property Name="B2BACK4" Type="varchar" MaxLength="251" />
+          <Property Name="B2BACK5" Type="varchar" MaxLength="251" />
+          <Property Name="S" Type="varchar" MaxLength="20" />
+          <Property Name="Q" Type="varchar" MaxLength="20" />
+          <Property Name="T" Type="varchar" MaxLength="20" />
+          <Property Name="O" Type="varchar" MaxLength="20" />
+          <Property Name="R" Type="varchar" MaxLength="20" />
+          <Property Name="L" Type="varchar" MaxLength="20" />
+          <Property Name="K" Type="varchar" MaxLength="20" />
+          <Property Name="M" Type="varchar" MaxLength="20" />
+          <Property Name="P" Type="varchar" MaxLength="20" />
+          <Property Name="N" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="TIGERModelStoreContainer">
+          <EntitySet Name="LG_206_ITEMS" EntityType="Self.LG_206_ITEMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LG_XT1001_206" EntityType="Self.LG_XT1001_206" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TIGERModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LG_206_ITEMS">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ACTIVE" Type="Int16" />
+          <Property Name="CARDTYPE" Type="Int16" />
+          <Property Name="CODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="STGRPCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PRODUCERCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CYPHCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CLASSTYPE" Type="Int16" />
+          <Property Name="PURCHBRWS" Type="Int16" />
+          <Property Name="SALESBRWS" Type="Int16" />
+          <Property Name="MTRLBRWS" Type="Int16" />
+          <Property Name="VAT" Type="Double" />
+          <Property Name="PAYMENTREF" Type="Int32" />
+          <Property Name="TRACKTYPE" Type="Int16" />
+          <Property Name="LOCTRACKING" Type="Int16" />
+          <Property Name="TOOL" Type="Int16" />
+          <Property Name="AUTOINCSL" Type="Int16" />
+          <Property Name="DIVLOTSIZE" Type="Int16" />
+          <Property Name="SHELFLIFE" Type="Double" />
+          <Property Name="SHELFDATE" Type="Int16" />
+          <Property Name="DOMINANTREFS1" Type="Int32" />
+          <Property Name="DOMINANTREFS2" Type="Int32" />
+          <Property Name="DOMINANTREFS3" Type="Int32" />
+          <Property Name="DOMINANTREFS4" Type="Int32" />
+          <Property Name="DOMINANTREFS5" Type="Int32" />
+          <Property Name="DOMINANTREFS6" Type="Int32" />
+          <Property Name="DOMINANTREFS7" Type="Int32" />
+          <Property Name="DOMINANTREFS8" Type="Int32" />
+          <Property Name="DOMINANTREFS9" Type="Int32" />
+          <Property Name="DOMINANTREFS10" Type="Int32" />
+          <Property Name="DOMINANTREFS11" Type="Int32" />
+          <Property Name="DOMINANTREFS12" Type="Int32" />
+          <Property Name="IMAGEINC" Type="Int16" />
+          <Property Name="TEXTINC" Type="Int16" />
+          <Property Name="DEPRTYPE" Type="Int16" />
+          <Property Name="DEPRRATE" Type="Double" />
+          <Property Name="DEPRDUR" Type="Int16" />
+          <Property Name="SALVAGEVAL" Type="Double" />
+          <Property Name="REVALFLAG" Type="Int16" />
+          <Property Name="REVDEPRFLAG" Type="Int16" />
+          <Property Name="PARTDEP" Type="Int16" />
+          <Property Name="DEPRTYPE2" Type="Int16" />
+          <Property Name="DEPRRATE2" Type="Double" />
+          <Property Name="DEPRDUR2" Type="Int16" />
+          <Property Name="REVALFLAG2" Type="Int16" />
+          <Property Name="REVDEPRFLAG2" Type="Int16" />
+          <Property Name="PARTDEP2" Type="Int16" />
+          <Property Name="APPROVED" Type="Int16" />
+          <Property Name="UNITSETREF" Type="Int32" />
+          <Property Name="QCCSETREF" Type="Int32" />
+          <Property Name="DISTAMOUNT" Type="Double" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="Int16" />
+          <Property Name="SITEID" Type="Int16" />
+          <Property Name="RECSTATUS" Type="Int16" />
+          <Property Name="ORGLOGICREF" Type="Int32" />
+          <Property Name="UNIVID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="DISTLOTUNITS" Type="Int16" />
+          <Property Name="COMBLOTUNITS" Type="Int16" />
+          <Property Name="WFSTATUS" Type="Int32" />
+          <Property Name="DISTPOINT" Type="Double" />
+          <Property Name="CAMPPOINT" Type="Double" />
+          <Property Name="CANUSEINTRNS" Type="Int16" />
+          <Property Name="ISONR" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="GROUPNR" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="PRODCOUNTRY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="ADDTAXREF" Type="Int32" />
+          <Property Name="QPRODAMNT" Type="Double" />
+          <Property Name="QPRODUOM" Type="Int32" />
+          <Property Name="QPRODSRCINDEX" Type="Int16" />
+          <Property Name="EXTACCESSFLAGS" Type="Int32" />
+          <Property Name="PACKET" Type="Int16" />
+          <Property Name="SALVAGEVAL2" Type="Double" />
+          <Property Name="SELLVAT" Type="Double" />
+          <Property Name="RETURNVAT" Type="Double" />
+          <Property Name="LOGOID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="LIDCONFIRMED" Type="Int16" />
+          <Property Name="GTIPCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="EXPCTGNO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="B2CCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MARKREF" Type="Int32" />
+          <Property Name="IMAGE2INC" Type="Int16" />
+          <Property Name="AVRWHDURATION" Type="Double" />
+          <Property Name="EXTCARDFLAGS" Type="Int32" />
+          <Property Name="MINORDAMOUNT" Type="Double" />
+          <Property Name="FREIGHTPLACE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE1" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE2" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE3" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE4" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE5" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE6" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE7" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE8" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE9" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="FREIGHTTYPCODE10" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="STATECODE" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="STATENAME" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+          <Property Name="EXPCATEGORY" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="LOSTFACTOR" Type="Double" />
+          <Property Name="TEXTINCENG" Type="Int16" />
+          <Property Name="EANBARCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="DEPRCLASSTYPE" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+          <Property Name="WFLOWCRDREF" Type="Int32" />
+          <Property Name="SELLPRVAT" Type="Double" />
+          <Property Name="RETURNPRVAT" Type="Double" />
+          <Property Name="LOWLEVELCODES1" Type="Int32" />
+          <Property Name="LOWLEVELCODES2" Type="Int32" />
+          <Property Name="LOWLEVELCODES3" Type="Int32" />
+          <Property Name="LOWLEVELCODES4" Type="Int32" />
+          <Property Name="LOWLEVELCODES5" Type="Int32" />
+          <Property Name="LOWLEVELCODES6" Type="Int32" />
+          <Property Name="LOWLEVELCODES7" Type="Int32" />
+          <Property Name="LOWLEVELCODES8" Type="Int32" />
+          <Property Name="LOWLEVELCODES9" Type="Int32" />
+          <Property Name="LOWLEVELCODES10" Type="Int32" />
+          <Property Name="ORGLOGOID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="QPRODDEPART" Type="Int16" />
+          <Property Name="CANCONFIGURE" Type="Int16" />
+          <Property Name="CHARSETREF" Type="Int32" />
+          <Property Name="CANDEDUCT" Type="Int16" />
+          <Property Name="CONSCODEREF" Type="Int32" />
+          <Property Name="SPECODE2" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE3" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE4" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE5" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="EXPENSE" Type="Int16" />
+          <Property Name="ORIGIN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="NAME2" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="COMPKDVUSE" Type="Int16" />
+          <Property Name="USEDINPERIODS" Type="Int16" />
+          <Property Name="EXIMTAX1" Type="Double" />
+          <Property Name="EXIMTAX2" Type="Double" />
+          <Property Name="EXIMTAX3" Type="Double" />
+          <Property Name="EXIMTAX4" Type="Double" />
+          <Property Name="EXIMTAX5" Type="Double" />
+          <Property Name="PRODUCTLEVEL" Type="Int16" />
+          <Property Name="APPSPEVATMATRAH" Type="Int16" />
+          <Property Name="NAME3" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+          <Property Name="FACOSTKEYS" Type="Int16" />
+          <Property Name="KKLINESDISABLE" Type="Int16" />
+          <Property Name="APPROVE" Type="Int16" />
+          <Property Name="APPROVEDATE" Type="DateTime" Precision="3" />
+          <Property Name="GLOBALID" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="SALEDEDUCTPART1" Type="Int16" />
+          <Property Name="SALEDEDUCTPART2" Type="Int16" />
+          <Property Name="PURCDEDUCTPART1" Type="Int16" />
+          <Property Name="PURCDEDUCTPART2" Type="Int16" />
+          <Property Name="CATEGORYID" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="CATEGORYNAME" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="KEYWORD1" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="KEYWORD2" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="KEYWORD3" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="KEYWORD4" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="KEYWORD5" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="GUID" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+          <Property Name="DEMANDMEETSORTFLD1" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DEMANDMEETSORTFLD2" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DEMANDMEETSORTFLD3" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DEMANDMEETSORTFLD4" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DEMANDMEETSORTFLD5" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="PROJECTREF" Type="Int32" />
+          <Property Name="NAME4" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+          <Property Name="QPRODSUBAMNT" Type="Double" />
+          <Property Name="QPRODSUBUOM" Type="Int32" />
+          <Property Name="QPRODSUBSRCINDEX" Type="Int16" />
+          <Property Name="QPRODSUBDEPART" Type="Int16" />
+          <Property Name="SORDAMNTTOLERANCE" Type="Double" />
+          <Property Name="PORDAMNTTOLERANCE" Type="Double" />
+          <Property Name="PUBLICCOUNTRYREF" Type="Int32" />
+          <Property Name="CPACODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MULTIADDTAX" Type="Int16" />
+          <Property Name="FAUSEFULLIFECODE2" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="FAUSEFULLIFECODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="MOLDMAINTLIFETYPE" Type="Int16" />
+          <Property Name="MOLDMAINTNUMBER" Type="Int32" />
+          <Property Name="MOLDLIFEASRATIO" Type="Int16" />
+          <Property Name="MOLDMAINTLIFE" Type="Double" />
+          <Property Name="MOLDLIFETRACKTYPE" Type="Int16" />
+          <Property Name="MOLD" Type="Int16" />
+          <Property Name="MOLDFACTOR" Type="Int16" />
+          <Property Name="MOLDUSAGELIFE" Type="Double" />
+        </EntityType>
+        <EntityType Name="LG_XT1001_206">
+          <Key>
+            <PropertyRef Name="LOGREF" />
+          </Key>
+          <Property Name="LOGREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PARLOGREF" Type="Int32" />
+          <Property Name="AFiyat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="A" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="B" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SFiyat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="C" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="D" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="E" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="F" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="G" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="H" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="I" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="J" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Z" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="B2BACK1" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="B2BACK2" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="B2BACK3" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="B2BACK4" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="B2BACK5" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="S" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Q" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="T" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="O" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="R" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="L" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="K" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="M" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="P" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="N" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TIGEREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LG_206_ITEMS" EntityType="Self.LG_206_ITEMS" />
+          <EntitySet Name="LG_XT1001_206" EntityType="Self.LG_XT1001_206" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TIGERModelStoreContainer" CdmEntityContainer="TIGEREntities">
+          <EntitySetMapping Name="LG_206_ITEMS">
+            <EntityTypeMapping TypeName="TIGERModel.LG_206_ITEMS">
+              <MappingFragment StoreEntitySet="LG_206_ITEMS">
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="STGRPCODE" ColumnName="STGRPCODE" />
+                <ScalarProperty Name="PRODUCERCODE" ColumnName="PRODUCERCODE" />
+                <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+                <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+                <ScalarProperty Name="CLASSTYPE" ColumnName="CLASSTYPE" />
+                <ScalarProperty Name="PURCHBRWS" ColumnName="PURCHBRWS" />
+                <ScalarProperty Name="SALESBRWS" ColumnName="SALESBRWS" />
+                <ScalarProperty Name="MTRLBRWS" ColumnName="MTRLBRWS" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="PAYMENTREF" ColumnName="PAYMENTREF" />
+                <ScalarProperty Name="TRACKTYPE" ColumnName="TRACKTYPE" />
+                <ScalarProperty Name="LOCTRACKING" ColumnName="LOCTRACKING" />
+                <ScalarProperty Name="TOOL" ColumnName="TOOL" />
+                <ScalarProperty Name="AUTOINCSL" ColumnName="AUTOINCSL" />
+                <ScalarProperty Name="DIVLOTSIZE" ColumnName="DIVLOTSIZE" />
+                <ScalarProperty Name="SHELFLIFE" ColumnName="SHELFLIFE" />
+                <ScalarProperty Name="SHELFDATE" ColumnName="SHELFDATE" />
+                <ScalarProperty Name="DOMINANTREFS1" ColumnName="DOMINANTREFS1" />
+                <ScalarProperty Name="DOMINANTREFS2" ColumnName="DOMINANTREFS2" />
+                <ScalarProperty Name="DOMINANTREFS3" ColumnName="DOMINANTREFS3" />
+                <ScalarProperty Name="DOMINANTREFS4" ColumnName="DOMINANTREFS4" />
+                <ScalarProperty Name="DOMINANTREFS5" ColumnName="DOMINANTREFS5" />
+                <ScalarProperty Name="DOMINANTREFS6" ColumnName="DOMINANTREFS6" />
+                <ScalarProperty Name="DOMINANTREFS7" ColumnName="DOMINANTREFS7" />
+                <ScalarProperty Name="DOMINANTREFS8" ColumnName="DOMINANTREFS8" />
+                <ScalarProperty Name="DOMINANTREFS9" ColumnName="DOMINANTREFS9" />
+                <ScalarProperty Name="DOMINANTREFS10" ColumnName="DOMINANTREFS10" />
+                <ScalarProperty Name="DOMINANTREFS11" ColumnName="DOMINANTREFS11" />
+                <ScalarProperty Name="DOMINANTREFS12" ColumnName="DOMINANTREFS12" />
+                <ScalarProperty Name="IMAGEINC" ColumnName="IMAGEINC" />
+                <ScalarProperty Name="TEXTINC" ColumnName="TEXTINC" />
+                <ScalarProperty Name="DEPRTYPE" ColumnName="DEPRTYPE" />
+                <ScalarProperty Name="DEPRRATE" ColumnName="DEPRRATE" />
+                <ScalarProperty Name="DEPRDUR" ColumnName="DEPRDUR" />
+                <ScalarProperty Name="SALVAGEVAL" ColumnName="SALVAGEVAL" />
+                <ScalarProperty Name="REVALFLAG" ColumnName="REVALFLAG" />
+                <ScalarProperty Name="REVDEPRFLAG" ColumnName="REVDEPRFLAG" />
+                <ScalarProperty Name="PARTDEP" ColumnName="PARTDEP" />
+                <ScalarProperty Name="DEPRTYPE2" ColumnName="DEPRTYPE2" />
+                <ScalarProperty Name="DEPRRATE2" ColumnName="DEPRRATE2" />
+                <ScalarProperty Name="DEPRDUR2" ColumnName="DEPRDUR2" />
+                <ScalarProperty Name="REVALFLAG2" ColumnName="REVALFLAG2" />
+                <ScalarProperty Name="REVDEPRFLAG2" ColumnName="REVDEPRFLAG2" />
+                <ScalarProperty Name="PARTDEP2" ColumnName="PARTDEP2" />
+                <ScalarProperty Name="APPROVED" ColumnName="APPROVED" />
+                <ScalarProperty Name="UNITSETREF" ColumnName="UNITSETREF" />
+                <ScalarProperty Name="QCCSETREF" ColumnName="QCCSETREF" />
+                <ScalarProperty Name="DISTAMOUNT" ColumnName="DISTAMOUNT" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDBY" ColumnName="CAPIBLOCK_CREATEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_CREADEDDATE" ColumnName="CAPIBLOCK_CREADEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDHOUR" ColumnName="CAPIBLOCK_CREATEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDMIN" ColumnName="CAPIBLOCK_CREATEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDSEC" ColumnName="CAPIBLOCK_CREATEDSEC" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDBY" ColumnName="CAPIBLOCK_MODIFIEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDDATE" ColumnName="CAPIBLOCK_MODIFIEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDHOUR" ColumnName="CAPIBLOCK_MODIFIEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDMIN" ColumnName="CAPIBLOCK_MODIFIEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDSEC" ColumnName="CAPIBLOCK_MODIFIEDSEC" />
+                <ScalarProperty Name="SITEID" ColumnName="SITEID" />
+                <ScalarProperty Name="RECSTATUS" ColumnName="RECSTATUS" />
+                <ScalarProperty Name="ORGLOGICREF" ColumnName="ORGLOGICREF" />
+                <ScalarProperty Name="UNIVID" ColumnName="UNIVID" />
+                <ScalarProperty Name="DISTLOTUNITS" ColumnName="DISTLOTUNITS" />
+                <ScalarProperty Name="COMBLOTUNITS" ColumnName="COMBLOTUNITS" />
+                <ScalarProperty Name="WFSTATUS" ColumnName="WFSTATUS" />
+                <ScalarProperty Name="DISTPOINT" ColumnName="DISTPOINT" />
+                <ScalarProperty Name="CAMPPOINT" ColumnName="CAMPPOINT" />
+                <ScalarProperty Name="CANUSEINTRNS" ColumnName="CANUSEINTRNS" />
+                <ScalarProperty Name="ISONR" ColumnName="ISONR" />
+                <ScalarProperty Name="GROUPNR" ColumnName="GROUPNR" />
+                <ScalarProperty Name="PRODCOUNTRY" ColumnName="PRODCOUNTRY" />
+                <ScalarProperty Name="ADDTAXREF" ColumnName="ADDTAXREF" />
+                <ScalarProperty Name="QPRODAMNT" ColumnName="QPRODAMNT" />
+                <ScalarProperty Name="QPRODUOM" ColumnName="QPRODUOM" />
+                <ScalarProperty Name="QPRODSRCINDEX" ColumnName="QPRODSRCINDEX" />
+                <ScalarProperty Name="EXTACCESSFLAGS" ColumnName="EXTACCESSFLAGS" />
+                <ScalarProperty Name="PACKET" ColumnName="PACKET" />
+                <ScalarProperty Name="SALVAGEVAL2" ColumnName="SALVAGEVAL2" />
+                <ScalarProperty Name="SELLVAT" ColumnName="SELLVAT" />
+                <ScalarProperty Name="RETURNVAT" ColumnName="RETURNVAT" />
+                <ScalarProperty Name="LOGOID" ColumnName="LOGOID" />
+                <ScalarProperty Name="LIDCONFIRMED" ColumnName="LIDCONFIRMED" />
+                <ScalarProperty Name="GTIPCODE" ColumnName="GTIPCODE" />
+                <ScalarProperty Name="EXPCTGNO" ColumnName="EXPCTGNO" />
+                <ScalarProperty Name="B2CCODE" ColumnName="B2CCODE" />
+                <ScalarProperty Name="MARKREF" ColumnName="MARKREF" />
+                <ScalarProperty Name="IMAGE2INC" ColumnName="IMAGE2INC" />
+                <ScalarProperty Name="AVRWHDURATION" ColumnName="AVRWHDURATION" />
+                <ScalarProperty Name="EXTCARDFLAGS" ColumnName="EXTCARDFLAGS" />
+                <ScalarProperty Name="MINORDAMOUNT" ColumnName="MINORDAMOUNT" />
+                <ScalarProperty Name="FREIGHTPLACE" ColumnName="FREIGHTPLACE" />
+                <ScalarProperty Name="FREIGHTTYPCODE1" ColumnName="FREIGHTTYPCODE1" />
+                <ScalarProperty Name="FREIGHTTYPCODE2" ColumnName="FREIGHTTYPCODE2" />
+                <ScalarProperty Name="FREIGHTTYPCODE3" ColumnName="FREIGHTTYPCODE3" />
+                <ScalarProperty Name="FREIGHTTYPCODE4" ColumnName="FREIGHTTYPCODE4" />
+                <ScalarProperty Name="FREIGHTTYPCODE5" ColumnName="FREIGHTTYPCODE5" />
+                <ScalarProperty Name="FREIGHTTYPCODE6" ColumnName="FREIGHTTYPCODE6" />
+                <ScalarProperty Name="FREIGHTTYPCODE7" ColumnName="FREIGHTTYPCODE7" />
+                <ScalarProperty Name="FREIGHTTYPCODE8" ColumnName="FREIGHTTYPCODE8" />
+                <ScalarProperty Name="FREIGHTTYPCODE9" ColumnName="FREIGHTTYPCODE9" />
+                <ScalarProperty Name="FREIGHTTYPCODE10" ColumnName="FREIGHTTYPCODE10" />
+                <ScalarProperty Name="STATECODE" ColumnName="STATECODE" />
+                <ScalarProperty Name="STATENAME" ColumnName="STATENAME" />
+                <ScalarProperty Name="EXPCATEGORY" ColumnName="EXPCATEGORY" />
+                <ScalarProperty Name="LOSTFACTOR" ColumnName="LOSTFACTOR" />
+                <ScalarProperty Name="TEXTINCENG" ColumnName="TEXTINCENG" />
+                <ScalarProperty Name="EANBARCODE" ColumnName="EANBARCODE" />
+                <ScalarProperty Name="DEPRCLASSTYPE" ColumnName="DEPRCLASSTYPE" />
+                <ScalarProperty Name="WFLOWCRDREF" ColumnName="WFLOWCRDREF" />
+                <ScalarProperty Name="SELLPRVAT" ColumnName="SELLPRVAT" />
+                <ScalarProperty Name="RETURNPRVAT" ColumnName="RETURNPRVAT" />
+                <ScalarProperty Name="LOWLEVELCODES1" ColumnName="LOWLEVELCODES1" />
+                <ScalarProperty Name="LOWLEVELCODES2" ColumnName="LOWLEVELCODES2" />
+                <ScalarProperty Name="LOWLEVELCODES3" ColumnName="LOWLEVELCODES3" />
+                <ScalarProperty Name="LOWLEVELCODES4" ColumnName="LOWLEVELCODES4" />
+                <ScalarProperty Name="LOWLEVELCODES5" ColumnName="LOWLEVELCODES5" />
+                <ScalarProperty Name="LOWLEVELCODES6" ColumnName="LOWLEVELCODES6" />
+                <ScalarProperty Name="LOWLEVELCODES7" ColumnName="LOWLEVELCODES7" />
+                <ScalarProperty Name="LOWLEVELCODES8" ColumnName="LOWLEVELCODES8" />
+                <ScalarProperty Name="LOWLEVELCODES9" ColumnName="LOWLEVELCODES9" />
+                <ScalarProperty Name="LOWLEVELCODES10" ColumnName="LOWLEVELCODES10" />
+                <ScalarProperty Name="ORGLOGOID" ColumnName="ORGLOGOID" />
+                <ScalarProperty Name="QPRODDEPART" ColumnName="QPRODDEPART" />
+                <ScalarProperty Name="CANCONFIGURE" ColumnName="CANCONFIGURE" />
+                <ScalarProperty Name="CHARSETREF" ColumnName="CHARSETREF" />
+                <ScalarProperty Name="CANDEDUCT" ColumnName="CANDEDUCT" />
+                <ScalarProperty Name="CONSCODEREF" ColumnName="CONSCODEREF" />
+                <ScalarProperty Name="SPECODE2" ColumnName="SPECODE2" />
+                <ScalarProperty Name="SPECODE3" ColumnName="SPECODE3" />
+                <ScalarProperty Name="SPECODE4" ColumnName="SPECODE4" />
+                <ScalarProperty Name="SPECODE5" ColumnName="SPECODE5" />
+                <ScalarProperty Name="EXPENSE" ColumnName="EXPENSE" />
+                <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+                <ScalarProperty Name="NAME2" ColumnName="NAME2" />
+                <ScalarProperty Name="COMPKDVUSE" ColumnName="COMPKDVUSE" />
+                <ScalarProperty Name="USEDINPERIODS" ColumnName="USEDINPERIODS" />
+                <ScalarProperty Name="EXIMTAX1" ColumnName="EXIMTAX1" />
+                <ScalarProperty Name="EXIMTAX2" ColumnName="EXIMTAX2" />
+                <ScalarProperty Name="EXIMTAX3" ColumnName="EXIMTAX3" />
+                <ScalarProperty Name="EXIMTAX4" ColumnName="EXIMTAX4" />
+                <ScalarProperty Name="EXIMTAX5" ColumnName="EXIMTAX5" />
+                <ScalarProperty Name="PRODUCTLEVEL" ColumnName="PRODUCTLEVEL" />
+                <ScalarProperty Name="APPSPEVATMATRAH" ColumnName="APPSPEVATMATRAH" />
+                <ScalarProperty Name="NAME3" ColumnName="NAME3" />
+                <ScalarProperty Name="FACOSTKEYS" ColumnName="FACOSTKEYS" />
+                <ScalarProperty Name="KKLINESDISABLE" ColumnName="KKLINESDISABLE" />
+                <ScalarProperty Name="APPROVE" ColumnName="APPROVE" />
+                <ScalarProperty Name="APPROVEDATE" ColumnName="APPROVEDATE" />
+                <ScalarProperty Name="GLOBALID" ColumnName="GLOBALID" />
+                <ScalarProperty Name="SALEDEDUCTPART1" ColumnName="SALEDEDUCTPART1" />
+                <ScalarProperty Name="SALEDEDUCTPART2" ColumnName="SALEDEDUCTPART2" />
+                <ScalarProperty Name="PURCDEDUCTPART1" ColumnName="PURCDEDUCTPART1" />
+                <ScalarProperty Name="PURCDEDUCTPART2" ColumnName="PURCDEDUCTPART2" />
+                <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+                <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+                <ScalarProperty Name="KEYWORD1" ColumnName="KEYWORD1" />
+                <ScalarProperty Name="KEYWORD2" ColumnName="KEYWORD2" />
+                <ScalarProperty Name="KEYWORD3" ColumnName="KEYWORD3" />
+                <ScalarProperty Name="KEYWORD4" ColumnName="KEYWORD4" />
+                <ScalarProperty Name="KEYWORD5" ColumnName="KEYWORD5" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="DEMANDMEETSORTFLD1" ColumnName="DEMANDMEETSORTFLD1" />
+                <ScalarProperty Name="DEMANDMEETSORTFLD2" ColumnName="DEMANDMEETSORTFLD2" />
+                <ScalarProperty Name="DEMANDMEETSORTFLD3" ColumnName="DEMANDMEETSORTFLD3" />
+                <ScalarProperty Name="DEMANDMEETSORTFLD4" ColumnName="DEMANDMEETSORTFLD4" />
+                <ScalarProperty Name="DEMANDMEETSORTFLD5" ColumnName="DEMANDMEETSORTFLD5" />
+                <ScalarProperty Name="DEDUCTCODE" ColumnName="DEDUCTCODE" />
+                <ScalarProperty Name="PROJECTREF" ColumnName="PROJECTREF" />
+                <ScalarProperty Name="NAME4" ColumnName="NAME4" />
+                <ScalarProperty Name="QPRODSUBAMNT" ColumnName="QPRODSUBAMNT" />
+                <ScalarProperty Name="QPRODSUBUOM" ColumnName="QPRODSUBUOM" />
+                <ScalarProperty Name="QPRODSUBSRCINDEX" ColumnName="QPRODSUBSRCINDEX" />
+                <ScalarProperty Name="QPRODSUBDEPART" ColumnName="QPRODSUBDEPART" />
+                <ScalarProperty Name="SORDAMNTTOLERANCE" ColumnName="SORDAMNTTOLERANCE" />
+                <ScalarProperty Name="PORDAMNTTOLERANCE" ColumnName="PORDAMNTTOLERANCE" />
+                <ScalarProperty Name="PUBLICCOUNTRYREF" ColumnName="PUBLICCOUNTRYREF" />
+                <ScalarProperty Name="CPACODE" ColumnName="CPACODE" />
+                <ScalarProperty Name="MULTIADDTAX" ColumnName="MULTIADDTAX" />
+                <ScalarProperty Name="FAUSEFULLIFECODE2" ColumnName="FAUSEFULLIFECODE2" />
+                <ScalarProperty Name="FAUSEFULLIFECODE" ColumnName="FAUSEFULLIFECODE" />
+                <ScalarProperty Name="MOLDMAINTLIFETYPE" ColumnName="MOLDMAINTLIFETYPE" />
+                <ScalarProperty Name="MOLDMAINTNUMBER" ColumnName="MOLDMAINTNUMBER" />
+                <ScalarProperty Name="MOLDLIFEASRATIO" ColumnName="MOLDLIFEASRATIO" />
+                <ScalarProperty Name="MOLDMAINTLIFE" ColumnName="MOLDMAINTLIFE" />
+                <ScalarProperty Name="MOLDLIFETRACKTYPE" ColumnName="MOLDLIFETRACKTYPE" />
+                <ScalarProperty Name="MOLD" ColumnName="MOLD" />
+                <ScalarProperty Name="MOLDFACTOR" ColumnName="MOLDFACTOR" />
+                <ScalarProperty Name="MOLDUSAGELIFE" ColumnName="MOLDUSAGELIFE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LG_XT1001_206">
+            <EntityTypeMapping TypeName="TIGERModel.LG_XT1001_206">
+              <MappingFragment StoreEntitySet="LG_XT1001_206">
+                <ScalarProperty Name="LOGREF" ColumnName="LOGREF" />
+                <ScalarProperty Name="PARLOGREF" ColumnName="PARLOGREF" />
+                <ScalarProperty Name="AFiyat" ColumnName="AFiyat" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="B" ColumnName="B" />
+                <ScalarProperty Name="SFiyat" ColumnName="SFiyat" />
+                <ScalarProperty Name="C" ColumnName="C" />
+                <ScalarProperty Name="D" ColumnName="D" />
+                <ScalarProperty Name="E" ColumnName="E" />
+                <ScalarProperty Name="F" ColumnName="F" />
+                <ScalarProperty Name="G" ColumnName="G" />
+                <ScalarProperty Name="H" ColumnName="H" />
+                <ScalarProperty Name="I" ColumnName="I" />
+                <ScalarProperty Name="J" ColumnName="J" />
+                <ScalarProperty Name="Z" ColumnName="Z" />
+                <ScalarProperty Name="B2BACK1" ColumnName="B2BACK1" />
+                <ScalarProperty Name="B2BACK2" ColumnName="B2BACK2" />
+                <ScalarProperty Name="B2BACK3" ColumnName="B2BACK3" />
+                <ScalarProperty Name="B2BACK4" ColumnName="B2BACK4" />
+                <ScalarProperty Name="B2BACK5" ColumnName="B2BACK5" />
+                <ScalarProperty Name="S" ColumnName="S" />
+                <ScalarProperty Name="Q" ColumnName="Q" />
+                <ScalarProperty Name="T" ColumnName="T" />
+                <ScalarProperty Name="O" ColumnName="O" />
+                <ScalarProperty Name="R" ColumnName="R" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="K" ColumnName="K" />
+                <ScalarProperty Name="M" ColumnName="M" />
+                <ScalarProperty Name="P" ColumnName="P" />
+                <ScalarProperty Name="N" ColumnName="N" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
