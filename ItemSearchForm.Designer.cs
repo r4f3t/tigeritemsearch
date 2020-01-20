@@ -66,7 +66,7 @@
             this.LBItems.ItemHeight = 29;
             this.LBItems.Location = new System.Drawing.Point(7, 33);
             this.LBItems.Name = "LBItems";
-            this.LBItems.Size = new System.Drawing.Size(409, 497);
+            this.LBItems.Size = new System.Drawing.Size(623, 497);
             this.LBItems.TabIndex = 1;
             // 
             // ItemSearchForm
@@ -74,7 +74,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(426, 554);
+            this.ClientSize = new System.Drawing.Size(642, 554);
             this.Controls.Add(this.LBItems);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.TXTGeneral);
