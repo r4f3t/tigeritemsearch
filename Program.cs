@@ -16,7 +16,7 @@ namespace ItemSearchTiger
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ItemSearchForm());
+            Application.Run(new ItemB2BExpReport());
         }
     }
 }

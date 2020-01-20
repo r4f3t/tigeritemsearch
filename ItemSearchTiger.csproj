@@ -33,14 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -55,8 +62,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Abstract\IItemB2BExpReport.cs" />
     <Compile Include="BusinessLayer\Abstract\IItemSearchService.cs" />
+    <Compile Include="BusinessLayer\Concrete\ItemB2BExpReport.cs" />
     <Compile Include="BusinessLayer\Concrete\ItemSearchManager.cs" />
+    <Compile Include="ItemB2BExpReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemB2BExpReport.Designer.cs">
+      <DependentUpon>ItemB2BExpReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,8 +99,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ItemModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ItemWithExp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ItemB2BExpReport.resx">
+      <DependentUpon>ItemB2BExpReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemSearchForm.resx">
       <DependentUpon>ItemSearchForm.cs</DependentUpon>
     </EmbeddedResource>
