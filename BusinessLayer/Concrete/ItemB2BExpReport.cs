@@ -19,7 +19,7 @@ namespace ItemSearchTiger.BusinessLayer.Concrete
         {
             using (db)
             {
-                var result = db.Query<ItemWithExp>("select top 100 I.LOGICALREF,I.CODE,I.NAME,I.NAME2,I.NAME3,I.SPECODE,I.SPECODE2,I.SPECODE3,I.SPECODE4,I.STGRPCODE,I.PRODUCERCODE,B2BACK1,B2BACK2,B2BACK3,B2BACK4,B2BACK5 from LG_206_ITEMS as I inner join LG_XT1001_206 as X on I.LOGICALREF=X.PARLOGREF order by I.CODE asc");
+                var result = db.Query<ItemWithExp>("select  I.LOGICALREF,I.CODE,I.NAME,I.NAME2,I.NAME3,I.SPECODE,I.SPECODE2,I.SPECODE3,I.SPECODE4,I.STGRPCODE,I.PRODUCERCODE,B2BACK1,B2BACK2,B2BACK3,B2BACK4,B2BACK5 from LG_206_ITEMS as I inner join LG_XT1001_206 as X on I.LOGICALREF=X.PARLOGREF order by I.CODE asc");
                 return result;
             }
         }
