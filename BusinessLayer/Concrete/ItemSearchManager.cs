@@ -15,7 +15,7 @@ namespace ItemSearchTiger.BusinessLayer
         {
 
 
-            var query = db.LG_206_ITEMS.Include("lG_XT1001_206s").AsQueryable();
+            var query = db.LG_206_ITEMS.AsQueryable();
 
             query = query.Where(x =>
                 (x.CODE).ToLower().Replace(" ", "").Contains(searchKey) ||
@@ -100,7 +100,7 @@ namespace ItemSearchTiger.BusinessLayer
 
         public ICollection<string> GetItemsTigerStr(string searchKey)
         {
-            var query = dbStr.LG_504_ITEMS.Include("lG_XT1001_206s").AsQueryable();
+            var query = dbStr.LG_504_ITEMS.AsQueryable();
 
             query = query.Where(x =>
                 (x.CODE).ToLower().Replace(" ", "").Contains(searchKey) ||
