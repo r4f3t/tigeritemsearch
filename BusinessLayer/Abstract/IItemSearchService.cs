@@ -9,5 +9,6 @@ namespace ItemSearchTiger.BusinessLayer.Abstract
     public interface IItemSearchService
     {
         ICollection<string> GetItems(string searchKey);
+        ICollection<string> GetItemsTigerStr(string searchKey);
     }
 }
