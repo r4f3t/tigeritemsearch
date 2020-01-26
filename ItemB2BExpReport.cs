@@ -21,14 +21,15 @@ namespace ItemSearchTiger
             InitializeComponent();
         }
         ItemB2BExpReportManager manager = new ItemB2BExpReportManager();
-        private  void BtnGetData_Click(object sender, EventArgs e)
+        GeneralItemsManager generalManager = new GeneralItemsManager();
+        private async void BtnGetData_Click(object sender, EventArgs e)
         {
             //var items = await db.LG_206_ITEMS.Select(x => new ItemWithExp { CODE = x.CODE, LOGICALREF = x.LOGICALREF }).ToListAsync();
 
             var oldText = BtnGetData.Text;
             BtnGetData.Text = "Veriler Alınıyor...";
             BtnGetData.Enabled = false;
-            GridItems.DataSource = manager.GetItems();
+            GridItems.DataSource = await manager.GetItems(CMBSpecode.Text);
             BtnGetData.Text = oldText;
             BtnGetData.Enabled = true;
         }
@@ -72,6 +73,12 @@ namespace ItemSearchTiger
             bw.Close();
             fs.Close();
             this.Close();
+        }
+
+        private async void ItemB2BExpReport_Load(object sender, EventArgs e)
+        {
+            var cmbData = await generalManager.GetSpecodes();
+            CMBSpecode.Items.AddRange(cmbData.ToArray<string>());
         }
     }
 }

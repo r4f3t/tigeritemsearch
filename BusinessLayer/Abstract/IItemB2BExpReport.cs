@@ -9,6 +9,6 @@ namespace ItemSearchTiger.BusinessLayer.Abstract
 {
 public interface IItemB2BExpReport
     {
-        IEnumerable<ItemWithExp> GetItems();
+        Task<IEnumerable<ItemWithExp>> GetItems(string specode);
     }
 }

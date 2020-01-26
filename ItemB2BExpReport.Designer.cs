@@ -30,14 +30,14 @@
         {
             this.BtnGetData = new System.Windows.Forms.Button();
             this.BtnExportToExcel = new System.Windows.Forms.Button();
-            this.PBGetItems = new System.Windows.Forms.ProgressBar();
             this.GridItems = new System.Windows.Forms.DataGridView();
+            this.CMBSpecode = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridItems)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGetData
             // 
-            this.BtnGetData.Location = new System.Drawing.Point(0, -1);
+            this.BtnGetData.Location = new System.Drawing.Point(164, -1);
             this.BtnGetData.Name = "BtnGetData";
             this.BtnGetData.Size = new System.Drawing.Size(111, 35);
             this.BtnGetData.TabIndex = 0;
@@ -55,13 +55,6 @@
             this.BtnExportToExcel.UseVisualStyleBackColor = true;
             this.BtnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
             // 
-            // PBGetItems
-            // 
-            this.PBGetItems.Location = new System.Drawing.Point(110, -1);
-            this.PBGetItems.Name = "PBGetItems";
-            this.PBGetItems.Size = new System.Drawing.Size(992, 35);
-            this.PBGetItems.TabIndex = 1;
-            // 
             // GridItems
             // 
             this.GridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -71,17 +64,27 @@
             this.GridItems.Size = new System.Drawing.Size(1213, 722);
             this.GridItems.TabIndex = 2;
             // 
+            // CMBSpecode
+            // 
+            this.CMBSpecode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CMBSpecode.FormattingEnabled = true;
+            this.CMBSpecode.Location = new System.Drawing.Point(0, 1);
+            this.CMBSpecode.Name = "CMBSpecode";
+            this.CMBSpecode.Size = new System.Drawing.Size(164, 30);
+            this.CMBSpecode.TabIndex = 3;
+            // 
             // ItemB2BExpReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1214, 753);
+            this.Controls.Add(this.CMBSpecode);
             this.Controls.Add(this.GridItems);
-            this.Controls.Add(this.PBGetItems);
             this.Controls.Add(this.BtnExportToExcel);
             this.Controls.Add(this.BtnGetData);
             this.Name = "ItemB2BExpReport";
             this.Text = "Ürün Açıklama Durumları";
+            this.Load += new System.EventHandler(this.ItemB2BExpReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridItems)).EndInit();
             this.ResumeLayout(false);
 
@@ -91,7 +94,7 @@
 
         private System.Windows.Forms.Button BtnGetData;
         private System.Windows.Forms.Button BtnExportToExcel;
-        private System.Windows.Forms.ProgressBar PBGetItems;
         private System.Windows.Forms.DataGridView GridItems;
+        private System.Windows.Forms.ComboBox CMBSpecode;
     }
 }

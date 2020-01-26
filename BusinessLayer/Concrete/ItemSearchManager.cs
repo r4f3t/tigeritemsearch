@@ -13,7 +13,7 @@ namespace ItemSearchTiger.BusinessLayer
         TIGERSTREntities dbStr = new TIGERSTREntities();
         public ICollection<string> GetItems(string searchKey)
         {
-
+            searchKey = searchKey.ToLower().Replace(" ", "");
 
             var query = db.LG_206_ITEMS.AsQueryable();
 
