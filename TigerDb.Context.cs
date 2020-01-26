@@ -16,7 +16,7 @@ namespace ItemSearchTiger
     public partial class TIGEREntities : DbContext
     {
         public TIGEREntities()
-            : base("name=TIGEREntities")
+            : base("name=TIGEREntities1")
         {
         }
     
@@ -26,6 +26,7 @@ namespace ItemSearchTiger
         }
     
         public virtual DbSet<LG_206_ITEMS> LG_206_ITEMS { get; set; }
+        public virtual DbSet<LG_206_SUPPASGN> LG_206_SUPPASGN { get; set; }
         public virtual DbSet<LG_XT1001_206> LG_XT1001_206 { get; set; }
     }
 }

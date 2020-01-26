@@ -73,11 +73,11 @@ namespace ItemSearchTiger.BusinessLayer
                 (x.NAME4).ToLower().Replace(" ", "").Contains(searchKey) ||
                 (x.CPACODE).ToLower().Replace(" ", "").Contains(searchKey) ||
                 (x.FAUSEFULLIFECODE2).ToLower().Replace(" ", "").Contains(searchKey) ||
-                (x.FAUSEFULLIFECODE).ToLower().Replace(" ", "").Contains(searchKey) 
+                (x.FAUSEFULLIFECODE).ToLower().Replace(" ", "").Contains(searchKey)
                 );
 
             var xtQuery = db.LG_XT1001_206.AsQueryable();
-            xtQuery = xtQuery.Where(x=>
+            xtQuery = xtQuery.Where(x =>
             (x.B2BACK1).ToLower().Replace(" ", "").Contains(searchKey) ||
             (x.B2BACK2).ToLower().Replace(" ", "").Contains(searchKey) ||
             (x.B2BACK3).ToLower().Replace(" ", "").Contains(searchKey) ||
@@ -85,15 +85,27 @@ namespace ItemSearchTiger.BusinessLayer
             (x.B2BACK5).ToLower().Replace(" ", "").Contains(searchKey)
             );
 
+            var asgnQuery = db.LG_206_SUPPASGN.AsQueryable();
+            asgnQuery = asgnQuery.Where(x => (x.ICUSTSUPCODE).ToLower().Replace(" ", "").Contains(searchKey) ||
+              (x.ICUSTSUPNAME).ToLower().Replace(" ", "").Contains(searchKey));
+
+
+
             var retList = query.Select(x => x.CODE).ToList();
 
             var queryRef = db.LG_206_ITEMS.AsQueryable();
 
             xtQuery.Select(x => x.PARLOGREF).ToList().ForEach(r =>
             {
-                retList.AddRange(queryRef.Where(x => x.LOGICALREF == r).Select(x=>x.CODE).ToList());
-               
+                retList.AddRange(queryRef.Where(x => x.LOGICALREF == r).Select(x => x.CODE).ToList());
+
             });
+
+            asgnQuery.Select(x => x.ITEMREF).ToList().ForEach(r => {
+                retList.AddRange(queryRef.Where(x => x.LOGICALREF == r).Select(x => x.CODE).ToList());
+            });
+
+
             retList.Sort();
             return retList;
         }
@@ -170,6 +182,11 @@ namespace ItemSearchTiger.BusinessLayer
             (x.B2BACK5).ToLower().Replace(" ", "").Contains(searchKey)
             );
 
+            var asgnQuery = dbStr.LG_504_SUPPASGN.AsQueryable();
+            asgnQuery = asgnQuery.Where(x => (x.ICUSTSUPCODE).ToLower().Replace(" ", "").Contains(searchKey) ||
+              (x.ICUSTSUPNAME).ToLower().Replace(" ", "").Contains(searchKey));
+
+
             var retList = query.Select(x => x.CODE).ToList();
 
             var queryRef = dbStr.LG_504_ITEMS.AsQueryable();
@@ -179,6 +196,12 @@ namespace ItemSearchTiger.BusinessLayer
                 retList.AddRange(queryRef.Where(x => x.LOGICALREF == r).Select(x => x.CODE).ToList());
 
             });
+
+
+            asgnQuery.Select(x => x.ITEMREF).ToList().ForEach(r => {
+                retList.AddRange(queryRef.Where(x => x.LOGICALREF == r).Select(x => x.CODE).ToList());
+            });
+
             retList.Sort();
             return retList;
         }

@@ -71,6 +71,7 @@ namespace ItemSearchTiger
             bw.Flush();
             bw.Close();
             fs.Close();
+            this.Close();
         }
     }
 }

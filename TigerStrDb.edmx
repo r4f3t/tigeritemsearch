@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TIGERSTRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TIGERSTRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="LG_504_ITEMS">
           <Key>
             <PropertyRef Name="LOGICALREF" />
@@ -203,6 +203,36 @@
           <Property Name="MOLDFACTOR" Type="smallint" />
           <Property Name="MOLDUSAGELIFE" Type="float" />
         </EntityType>
+        <EntityType Name="LG_504_SUPPASGN">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ITEMREF" Type="int" />
+          <Property Name="SUPPLYTYPE" Type="smallint" />
+          <Property Name="PRIORITY" Type="smallint" />
+          <Property Name="LINENR" Type="smallint" />
+          <Property Name="CLIENTREF" Type="int" />
+          <Property Name="TRADINGGRP" Type="varchar" MaxLength="17" />
+          <Property Name="CLCARDTYPE" Type="smallint" />
+          <Property Name="KKKCHECK" Type="smallint" />
+          <Property Name="LEADTIME" Type="float" />
+          <Property Name="MAXQUANTITY" Type="float" />
+          <Property Name="MINQUANTITY" Type="float" />
+          <Property Name="BEGDATE" Type="datetime" />
+          <Property Name="SPECIALIZED" Type="smallint" />
+          <Property Name="ICUSTSUPCODE" Type="varchar" MaxLength="25" />
+          <Property Name="ICUSTSUPNAME" Type="varchar" MaxLength="51" />
+          <Property Name="QTYDEPLEADTIME" Type="float" />
+          <Property Name="PACKETREF" Type="int" />
+          <Property Name="PACKAGINGAMNT" Type="float" />
+          <Property Name="PACKAGINGUOMREF" Type="int" />
+          <Property Name="PACKETUSETYPE" Type="smallint" />
+          <Property Name="ORDPERC" Type="float" />
+          <Property Name="ORDFREQ" Type="smallint" />
+          <Property Name="VARIANTREF" Type="int" />
+          <Property Name="ICUSTSUPBARCODE" Type="varchar" MaxLength="25" />
+        </EntityType>
         <EntityType Name="LG_XT1001_504">
           <Key>
             <PropertyRef Name="LOGREF" />
@@ -240,10 +270,10 @@
         </EntityType>
         <EntityContainer Name="TIGERSTRModelStoreContainer">
           <EntitySet Name="LG_504_ITEMS" EntityType="Self.LG_504_ITEMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LG_504_SUPPASGN" EntityType="Self.LG_504_SUPPASGN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LG_XT1001_504" EntityType="Self.LG_XT1001_504" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TIGERSTRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -483,7 +513,38 @@
         <EntityContainer Name="TIGERSTREntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LG_504_ITEMS" EntityType="Self.LG_504_ITEMS" />
           <EntitySet Name="LG_XT1001_504" EntityType="Self.LG_XT1001_504" />
+          <EntitySet Name="LG_504_SUPPASGN" EntityType="TIGERSTRModel.LG_504_SUPPASGN" />
         </EntityContainer>
+        <EntityType Name="LG_504_SUPPASGN">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ITEMREF" Type="Int32" />
+          <Property Name="SUPPLYTYPE" Type="Int16" />
+          <Property Name="PRIORITY" Type="Int16" />
+          <Property Name="LINENR" Type="Int16" />
+          <Property Name="CLIENTREF" Type="Int32" />
+          <Property Name="TRADINGGRP" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="CLCARDTYPE" Type="Int16" />
+          <Property Name="KKKCHECK" Type="Int16" />
+          <Property Name="LEADTIME" Type="Double" />
+          <Property Name="MAXQUANTITY" Type="Double" />
+          <Property Name="MINQUANTITY" Type="Double" />
+          <Property Name="BEGDATE" Type="DateTime" Precision="3" />
+          <Property Name="SPECIALIZED" Type="Int16" />
+          <Property Name="ICUSTSUPCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ICUSTSUPNAME" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="QTYDEPLEADTIME" Type="Double" />
+          <Property Name="PACKETREF" Type="Int32" />
+          <Property Name="PACKAGINGAMNT" Type="Double" />
+          <Property Name="PACKAGINGUOMREF" Type="Int32" />
+          <Property Name="PACKETUSETYPE" Type="Int16" />
+          <Property Name="ORDPERC" Type="Double" />
+          <Property Name="ORDFREQ" Type="Int16" />
+          <Property Name="VARIANTREF" Type="Int32" />
+          <Property Name="ICUSTSUPBARCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -722,6 +783,37 @@
                 <ScalarProperty Name="N" ColumnName="N" />
                 <ScalarProperty Name="O" ColumnName="O" />
                 <ScalarProperty Name="M" ColumnName="M" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LG_504_SUPPASGN">
+            <EntityTypeMapping TypeName="TIGERSTRModel.LG_504_SUPPASGN">
+              <MappingFragment StoreEntitySet="LG_504_SUPPASGN">
+                <ScalarProperty Name="ICUSTSUPBARCODE" ColumnName="ICUSTSUPBARCODE" />
+                <ScalarProperty Name="VARIANTREF" ColumnName="VARIANTREF" />
+                <ScalarProperty Name="ORDFREQ" ColumnName="ORDFREQ" />
+                <ScalarProperty Name="ORDPERC" ColumnName="ORDPERC" />
+                <ScalarProperty Name="PACKETUSETYPE" ColumnName="PACKETUSETYPE" />
+                <ScalarProperty Name="PACKAGINGUOMREF" ColumnName="PACKAGINGUOMREF" />
+                <ScalarProperty Name="PACKAGINGAMNT" ColumnName="PACKAGINGAMNT" />
+                <ScalarProperty Name="PACKETREF" ColumnName="PACKETREF" />
+                <ScalarProperty Name="QTYDEPLEADTIME" ColumnName="QTYDEPLEADTIME" />
+                <ScalarProperty Name="ICUSTSUPNAME" ColumnName="ICUSTSUPNAME" />
+                <ScalarProperty Name="ICUSTSUPCODE" ColumnName="ICUSTSUPCODE" />
+                <ScalarProperty Name="SPECIALIZED" ColumnName="SPECIALIZED" />
+                <ScalarProperty Name="BEGDATE" ColumnName="BEGDATE" />
+                <ScalarProperty Name="MINQUANTITY" ColumnName="MINQUANTITY" />
+                <ScalarProperty Name="MAXQUANTITY" ColumnName="MAXQUANTITY" />
+                <ScalarProperty Name="LEADTIME" ColumnName="LEADTIME" />
+                <ScalarProperty Name="KKKCHECK" ColumnName="KKKCHECK" />
+                <ScalarProperty Name="CLCARDTYPE" ColumnName="CLCARDTYPE" />
+                <ScalarProperty Name="TRADINGGRP" ColumnName="TRADINGGRP" />
+                <ScalarProperty Name="CLIENTREF" ColumnName="CLIENTREF" />
+                <ScalarProperty Name="LINENR" ColumnName="LINENR" />
+                <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+                <ScalarProperty Name="SUPPLYTYPE" ColumnName="SUPPLYTYPE" />
+                <ScalarProperty Name="ITEMREF" ColumnName="ITEMREF" />
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

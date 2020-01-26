@@ -7,6 +7,7 @@
       <Diagram DiagramId="979e17fcd9484f78a316b25602d5727c" Name="Diagram1" ZoomLevel="11">
         <EntityTypeShape EntityType="TIGERSTRModel.LG_504_ITEMS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TIGERSTRModel.LG_XT1001_504" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIGERSTRModel.LG_504_SUPPASGN" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

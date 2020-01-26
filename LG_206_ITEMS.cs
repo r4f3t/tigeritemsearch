@@ -207,6 +207,5 @@ namespace ItemSearchTiger
         public Nullable<short> MOLD { get; set; }
         public Nullable<short> MOLDFACTOR { get; set; }
         public Nullable<double> MOLDUSAGELIFE { get; set; }
-
     }
 }
